@@ -2,6 +2,7 @@ import { TodoItem } from "@/components/TodoItem";
 import { TodoInput } from "@/components/TodoInput";
 import { useTodos } from "@/hooks/useTodos";
 import { useToast } from "@/components/ui/use-toast";
+import Header from "@/components/Header";
 
 const Index = () => {
   const { toast } = useToast();
@@ -43,9 +44,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-2xl mx-auto px-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">Todo List</h1>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      <div className="max-w-2xl mx-auto px-4 py-8">
         <TodoInput onAdd={handleAddTodo} />
         <div className="space-y-2">
           {todos.map((todo) => (
