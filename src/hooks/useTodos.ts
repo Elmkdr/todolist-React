@@ -37,5 +37,11 @@ export const useTodos = () => {
     setTodos(prev => prev.filter(todo => todo.id !== id));
   };
 
-  return { todos, addTodo, toggleTodo, deleteTodo };
+  const updateTodo = (id: string, newText: string) => {
+    setTodos(prev => prev.map(todo =>
+      todo.id === id ? { ...todo, text: newText } : todo
+    ));
+  };
+
+  return { todos, addTodo, toggleTodo, deleteTodo, updateTodo };
 };

@@ -5,7 +5,7 @@ import { useToast } from "@/components/ui/use-toast";
 
 const Index = () => {
   const { toast } = useToast();
-  const { todos, addTodo, toggleTodo, deleteTodo } = useTodos();
+  const { todos, addTodo, toggleTodo, deleteTodo, updateTodo } = useTodos();
 
   const handleAddTodo = (text: string) => {
     addTodo(text);
@@ -34,6 +34,14 @@ const Index = () => {
     });
   };
 
+  const handleUpdateTodo = (id: string, newText: string) => {
+    updateTodo(id, newText);
+    toast({
+      title: "Todo updated",
+      description: "Your todo has been updated successfully.",
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-2xl mx-auto px-4">
@@ -46,6 +54,7 @@ const Index = () => {
               todo={todo}
               onToggle={handleToggleTodo}
               onDelete={handleDeleteTodo}
+              onUpdate={handleUpdateTodo}
             />
           ))}
           {todos.length === 0 && (
