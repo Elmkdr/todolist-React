@@ -1,69 +1,103 @@
-# Welcome to your Lovable project
+# Todo List Application
 
-## Project info
+This project is a simple Todo List application built using React, TypeScript, Tailwind CSS, and Vite. It allows users to manage their tasks efficiently with features like adding, editing, and deleting todos.
 
-**URL**: https://lovable.dev/projects/2333f174-6c35-4176-91cf-416916332e45
+---
 
-## How can I edit this code?
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Tech Stack](#tech-stack)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## Features
+- **Add Todos**: Add new tasks to your list.
+- **Edit Todos**: Modify existing tasks.
+- **Delete Todos**: Remove tasks from the list.
+- **Responsive Design**: Optimized for mobile and desktop screens.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2333f174-6c35-4176-91cf-416916332e45) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## Installation
 
-**Use your preferred IDE**
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/todo-list-react-ts.git
+    cd todo-list-react-ts
+    ```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
 
-Follow these steps:
+4. Open your browser and navigate to:
+    ```
+    http://localhost:5173
+    ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Usage
 
-# Step 3: Install the necessary dependencies.
-npm i
+- Add a new task using the input field and the "Add" button.
+- Edit an existing task by clicking the "Edit" button next to it.
+- Delete a task by clicking the "Delete" button.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+---
+
+## Tech Stack
+
+### Frontend
+- **React**: Library for building user interfaces
+- **TypeScript**: Static typing for JavaScript
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **Vite**: Build tool for blazing-fast development
+
+---
+
+## Folder Structure
+```
+.
+├── public
+├── src
+│   ├── components
+│   │   ├── TodoItem.tsx
+│   │   ├── TodoList.tsx
+│   │   └── AddTodo.tsx
+│   ├── hooks
+│   │   └── useTodos.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── tsconfig.json
+├── vite.config.ts
+└── package.json
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Contributing
 
-**Use GitHub Codespaces**
+Contributions are welcome! To contribute:
+1. Fork this repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -m 'Add feature name'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Open a pull request.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## License
 
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/2333f174-6c35-4176-91cf-416916332e45) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
